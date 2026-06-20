@@ -78,7 +78,7 @@ export default function RacingQuiz() {
   // 4. 팀 준비 완료
   const handleReady = (selectedTeam) => {
     setTeam(selectedTeam);
-    // update(ref(database, "quizGame"), { [`${selectedTeam}_ready`]: true });
+    setGameState("playing"); // <--- 이 줄을 추가하세요!
   };
 
   // ================= UI 랜더링 =================
